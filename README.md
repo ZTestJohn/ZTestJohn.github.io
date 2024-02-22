@@ -1,2 +1,2 @@
 # ZTestJohn.github.io
-Um site que eu vou fazer um dia 
+Uma pagina que contém um conjunto de links sociais algo como uma página linktree.
