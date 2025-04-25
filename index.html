@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header>
-      <div>
-        <h1>Portfólio</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a class="hover-underline" href="#projetos">Projetos</a></li>
-          <li><a class="hover-underline" href="#sobre">Sobre mim</a></li>
-          <li><a class="hover-underline" href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
     <main>
       <div class="sections-portifolio">
         <section class="home">
+          <header>
+            <div>
+              <h1>Portfólio</h1>
+            </div>
+            <nav>
+              <ul>
+                <li>
+                  <a class="hover-underline" href="#projetos">Projetos</a>
+                </li>
+                <li><a class="hover-underline" href="#sobre">Sobre mim</a></li>
+                <li><a class="hover-underline" href="#contato">Contato</a></li>
+              </ul>
+            </nav>
+          </header>
           <div class="text-content div-home">
             <h2 class="home-title">
               Olá, me chamo<br /><span class="name">João Vitor</span>
@@ -43,95 +46,238 @@
           </div>
           <div class="img div-home">
             <img
-              src="https://via.placeholder.com/300"
-              alt="Imagem de exemplo"
+              src=""
+              alt=""
             />
           </div>
-                  <div class="indicador">
-          Projetos
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="60"
-            height="60"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#f0a500"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M6 9l6 6l6 -6" />
-          </svg>
-        </div>
+          <div class="indicador">
+            Projetos
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="60"
+              height="60"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#f0a500"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 9l6 6l6 -6" />
+            </svg>
+          </div>
         </section>
-        <section class="content-sections">
-          
+
+        <section id="projetos" class="content-sections">
+          <h2 class="section-title">Meus Projetos</h2>
+          <div class="projects"></div>
         </section>
-        <section class="content-sections">
-          <div class="card">
-            <img src="" alt="" class="profile-picture">
-            <div class="campo">
-              <h2>
-                Nome completo
-              </h2>
-              <h3>
-                João Vitor Moreira Lofino
-              </h3>
-            </div>
-            <div class="campo">
-              <h2>
-                Objetivo profissional
-              </h2>
-              <h3>
-                Conseguir um emprego na área e avançar nos estudos.
-              </h3>
-            </div>
-            <div class="campo">
-              <h2>
-                Formação acadêmica
-              </h2>
-              <h3>
-                Cursando Ensino Técnico no UNASP-HT  (início em 2024)
-              </h3>
-            </div>
-            <div class="campo">
-              <h2>
-                Cursos realizados
-              </h2>
-              <h3>
-                Estudo por conta.
-              </h3>
-            </div>
-            <div class="campo">
-              <h2>
-                Experiências profissionais ou projetos
-              </h2>
-              <div class="repositories">
-                
+
+        <section id="sobre" class="projects-sect content-sections">
+          <h2 class="section-title">Minhas experiências e conhecimentos</h2>
+          <div class="cards-slider">
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="front-card">Linguagens e técnologias</div>
+                <div class="back-card">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="profile-picture icon icon-tabler icons-tabler-outline icon-tabler-code"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M7 8l-4 4l4 4" />
+                    <path d="M17 8l4 4l-4 4" />
+                    <path d="M14 4l-4 16" />
+                  </svg>
+                  <div class="campo">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Python</li>
+                      <li>C#</li>
+                      <li>Node.js</li>
+                      <li>React</li>
+                      <li>Github</li>
+                      <li>Git</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="campo">
-              <h2>
-                Habilidades técnicas (Ex: HTML, CSS, JavaScript, MySQL...):
-              </h2>
-              <h3>
-                descrever
-              </h3>
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="front-card">Sobre Mim</div>
+                <div class="back-card">
+                  <img
+                    src="https://www.dfksolucoes.com.br/wp-content/uploads/2021/08/IAFOR-Blank-Avatar-Image.jpg"
+                    alt=""
+                    class="profile-picture"
+                  />
+                  <div class="campo">
+                    <h2>Nome completo</h2>
+                    <h3>João Vitor Moreira Lofino</h3>
+                  </div>
+                  <div class="campo">
+                    <h2>Objetivo profissional</h2>
+                    <h3>Conseguir um emprego na área e avançar nos estudos.</h3>
+                  </div>
+                  <div class="campo">
+                    <h2>Formação acadêmica</h2>
+                    <h3>
+                      Cursando Ensino Técnico no UNASP-HT (início em 2024)
+                    </h3>
+                  </div>
+                  <div class="campo">
+                    <h2>Cursos realizados</h2>
+                    <h3>Estudo por conta.</h3>
+                  </div>
+                  <div class="campo">
+                    <h2>Experiências profissionais ou projetos</h2>
+                    <a href="#projetos">Meus Projetos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="front-card">Design</div>
+                <div class="back-card">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="profile-picture icon icon-tabler icons-tabler-outline icon-tabler-palette"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"
+                    />
+                    <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                    <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                  </svg>
+                  <div class="campo">
+                    <h2>Canva</h2>
+                    <h3>
+                      Utilizo o Canva há mais de 4 anos, aplicando-o em diversos
+                      contextos, como a criação de apresentações, materiais
+                      gráficos, conteúdos para redes sociais e protótipos
+                      visuais.
+                    </h3>
+                  </div>
+                  <div class="campo">
+                    <h2>Gimp</h2>
+                    <h3>
+                      Tive aulas durante um ano sobre design gráfico, com foco
+                      em teoria das cores, composição visual e aplicação prática
+                      por meio do GIMP
+                    </h3>
+                  </div>
+                  <div class="campo">
+                    <h2>Figma</h2>
+                    <h3>Em estudo.</h3>
+                  </div>
+                  <div class="campo">
+                    <h2>UI e UX</h2>
+                    <h3>Em estudo.</h3>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <section class="content-sections">
+
+        <section id="contato" class="content-sections">
           <div>
-            <a href="">LinkedIn</a>
-            <a href="">Github</a>
-            <a href="mailto:lofinojoaovitor@gmail.com">lofinojoaovitor@gmail.com</a>
+            <div class="contato">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 11v5" />
+                <path d="M8 8v.01" />
+                <path d="M12 16v-5" />
+                <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                <path
+                  d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"
+                />
+              </svg>
+              <a href="https://www.linkedin.com/in/jo%C3%A3o-vi/">LinkedIn</a>
+            </div>
+            <div class="contato">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                />
+              </svg>
+              <a href="https://github.com/ZTestJohn">Github</a>
+            </div>
+            <div class="contato">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+                />
+                <path d="M3 7l9 6l9 -6" />
+              </svg>
+              <a href="mailto:lofinojoaovitor@gmail.com"
+                >lofinojoaovitor@gmail.com</a
+              >
+            </div>
           </div>
         </section>
       </div>
     </main>
-    <footer></footer>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

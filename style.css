@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -10,6 +11,8 @@ body{
     color: antiquewhite;
 }
 header {
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 60px;
     padding: 5px;
@@ -39,6 +42,12 @@ a {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
+
+section {
+  position: relative;
+  padding: 40px;
+}
+
 .home {
     position: relative;
     width: 100%;
@@ -83,6 +92,12 @@ a {
 
 .indicador svg {
   animation: bounce 1.5s infinite ease-in-out;
+}
+
+.projects-sect {
+  background-image: url("./img/bg-projects.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @keyframes bounce {
@@ -143,4 +158,294 @@ a {
   50% {
     border-color: antiquewhite;
   }
+}
+
+/* Flip Card \/ ===================== */
+
+.card-wrapper {
+  perspective: 1500px; 
+  overflow: hidden;
+  width: 100%;
+  max-width: 20vw;
+  aspect-ratio: 9/14;
+  position: relative;
+  padding: 1px;
+  border-radius: 10px;
+}
+
+.card {
+  padding: 1px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; 
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  transform: skewX(-25deg);
+  animation: shine 2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes shine {
+  0% {
+    left: -140%;
+  }
+  50% {
+    left: 140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+.front-card,
+.back-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  border: 1px solid #f0a500;
+}
+
+.front-card {
+  background: linear-gradient(135deg, #f0a500, #f3ffd4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  transform: rotateY(0deg);
+}
+
+.back-card {
+  background-color: #2e2e2e;
+  color: antiquewhite;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card:hover .front-card {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back-card {
+  transform: rotateY(0deg);
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  border: 3px solid #f0a500;
+  color: #f0a500;
+}
+
+.campo {
+  font-family: 'Poppins', sans-serif;
+}
+
+.campo h2 {
+  font-size: 1rem;
+  color: #f0a500;
+  margin-bottom: 5px;
+}
+
+.campo ul li {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f0a500;
+  margin-bottom: 5px;
+}
+
+.campo h3 {
+  font-size: 0.9rem;
+  color: antiquewhite;
+  line-height: 1.4;
+}
+
+.repositories {
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.cards-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+/* ================================= */
+
+/* Talvez isso não fique na versão final */
+.section-title {
+  font-size: 2.5rem;
+  color: #f0a500;
+  padding-bottom:40px;
+}
+
+.sections-portifolio {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh; 
+}
+
+.sections-portifolio > section {
+  scroll-snap-align: start;
+  height: 100vh; 
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card-project {
+  border: 1px solid antiquewhite;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+  max-width: 40vw;
+  font-family: 'Poppins', sans-serif;
+  color: #24292e;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-project .repository-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f0a500; 
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.card-project .repository-name:hover {
+  text-decoration: underline;
+}
+
+.card-project .project-description {
+  font-size: 0.875rem;
+  color: antiquewhite;
+  margin: 8px 0;
+}
+
+.card-project .project-language {
+  font-size: 0.875rem;
+  color: antiquewhite;
+  font-weight: 500;
+}
+
+#contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  gap: 20px;
+}
+
+#contato .contato {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+#contato a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+#contato a:hover {
+  color: #f0a500;
+}
+
+#contato svg {
+  stroke: #f0a500; 
+  width: 32px;
+  height: 32px;
+}
+
+@media (width < 768px) {
+  header {
+    position: static;
+    flex-direction: column;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+  }
+  .sections-portifolio {
+    scroll-snap-type: none;
+    overflow-y: auto;
+  }
+  .sections-portifolio > section {
+    min-height: 100vh; 
+  }
+  .home {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .home span {
+    font-size: 3rem; 
+  }
+  .home .typing-effect {
+    display: none;
+  }
+  .indicador {
+    bottom: 160px;
+    right: 50%;
+  }
+
+  .home-title {
+    font-size: 1.8rem; 
+  }
+
+
+  .projects {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+.card-project {
+  max-width: 90vw;
+}
 }
