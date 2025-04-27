@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(46, 46, 46);
+  color: antiquewhite;
+}
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+header h1 {
+  font-size: 2.2em;
+}
+
+header div {
+  flex: 1;
+}
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  padding: 40px;
+}
+
+.home-sect {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 60px;
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.div-home {
+  flex: 1;
+  display: flex;
+}
+.content-sections {
+  height: 100vh;
+}
+.home-title {
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  color: antiquewhite;
+}
+.home-title span {
+  line-height: 2vw;
+  font-size: 5vw;
+  color: #f0a500;
+}
+
+.indicador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+
+.indicador svg {
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.projects-sect {
+  background-image: url("./img/bg-projects.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.typing-effect {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid #000;
+  padding-right: 2px;
+  animation: blink 0.5s step-end infinite;
+}
+
+.hover-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #f0a500, #f3ffd4);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease-out;
+}
+
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: antiquewhite;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #f0a500;
+  padding-bottom: 40px;
+}
+
+.sections-portifolio {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.sections-portifolio > section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card-project {
+  border: 1px solid antiquewhite;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+  max-width: 40vw;
+  font-family: "Poppins", sans-serif;
+  color: #24292e;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-project .repository-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f0a500;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.card-project .repository-name:hover {
+  text-decoration: underline;
+}
+
+.card-project .project-description {
+  font-size: 0.875rem;
+  color: antiquewhite;
+  margin: 8px 0;
+}
+
+.card-project .project-language {
+  font-size: 0.875rem;
+  color: antiquewhite;
+  font-weight: 500;
+}
+
+#contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  gap: 20px;
+}
+
+#contato .contato {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+#contato a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+#contato a:hover {
+  color: #f0a500;
+}
+
+#contato svg {
+  stroke: #f0a500;
+  width: 32px;
+  height: 32px;
+}
+
+.tab-indicator {
+  padding: 20px;
+  gap: 20px;
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-link {
+  width: 12px; 
+  height: 12px;
+  color: rgba(250, 235, 215, 0.5);
+  cursor: pointer;
+}
+
+.tab-link:hover {
+  color: #f0a500;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}

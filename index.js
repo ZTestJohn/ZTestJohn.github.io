@@ -1,4 +1,4 @@
-import getGithubToken from "./github_token.js";
+import getGithubToken from "./token/github_token.js";
 
 const { github_token } = getGithubToken();
 

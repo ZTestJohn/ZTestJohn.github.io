@@ -1,0 +1,69 @@
+@media (width < 768px) {
+  header {
+    position: static;
+    flex-direction: column;
+    padding: 0 0 80px 0;
+  }
+  .home-sect {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .img-home {
+    display: none;
+  }
+  .home-sect .typing-effect {
+    display: none;
+  }
+  .home-sect span {
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+  .sections-portifolio {
+    scroll-snap-type: none;
+    overflow-y: auto;
+  }
+
+  .text-content {
+    margin-top: 15vh;
+  }
+
+  .indicador {
+    bottom: 30px;
+    right: 50%;
+  }
+  .home-title {
+    font-size: 2rem;
+  }
+}
+
+@media (width < 768px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding-top: 20px;
+    max-height: none;
+  }
+  .card-project {
+    min-width: 100%;
+  }
+  .content-sections {
+    height: auto;
+  }
+  .sections-portifolio > section {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+
+@media (width < 768px) {
+  .cards-slider {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .card-wrapper {
+    max-width: 80vw;
+  }
+}
