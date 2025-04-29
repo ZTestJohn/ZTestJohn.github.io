@@ -1,6 +1,5 @@
-import getGithubToken from "./token/github_token.js";
+const GITHUB_TOKEN = "token_aqui"
 
-const { github_token } = getGithubToken();
 
 const texts = [
   "Eu realmente gosto de programar",
@@ -49,14 +48,13 @@ let isDeleting = false;
 async function fetchRepositories() {
   const username = "ZTestJohn";
   const projectsContainer = document.querySelector(".projects");
-  const token = github_token; 
 
   try {
     const reposResponse = await fetch(
       `https://api.github.com/users/${username}/repos`,
       {
         headers: {
-          Authorization: `token ${token}`,
+          Authorization: `token ${GITHUB_TOKEN}`,
         },
       }
     );

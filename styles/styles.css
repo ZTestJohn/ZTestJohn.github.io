@@ -11,6 +11,7 @@ body {
   color: antiquewhite;
 }
 header {
+  background-color: rgb(46, 46, 46);
   position: absolute;
   top: 0;
   width: 100%;
@@ -66,6 +67,7 @@ section {
   flex: 1;
   display: flex;
 }
+
 .content-sections {
   height: 100vh;
 }

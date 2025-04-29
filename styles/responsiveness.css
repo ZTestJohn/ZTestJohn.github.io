@@ -13,7 +13,7 @@
     display: none;
   }
   .home-sect .typing-effect {
-    display: none;
+    font-size: 1rem;
   }
   .home-sect span {
     font-size: 4rem;
@@ -65,5 +65,6 @@
   }
   .card-wrapper {
     max-width: 80vw;
+    aspect-ratio: 9/16;
   }
 }
